@@ -39,8 +39,13 @@ class MainActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
         val filter = IntentFilter("my.custom.action.tag.lab6")
-        registerReceiver(broadcastReceiver, filter)
+        try {
+            registerReceiver(broadcastReceiver, filter)
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
     }
+
 
     override fun onStop() {
         super.onStop()
