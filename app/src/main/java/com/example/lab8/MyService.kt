@@ -5,6 +5,7 @@ import android.media.MediaPlayer
 import android.os.Build
 import android.os.IBinder
 import androidx.core.app.NotificationCompat
+import com.example.lab8.R
 
 class MyService : Service() {
 
@@ -12,7 +13,7 @@ class MyService : Service() {
     private val CHANNEL_ID = "channelId"
 
     override fun onCreate() {
-        soundPlayer = MediaPlayer.create(this, R.raw.song)
+        soundPlayer = MediaPlayer.create(this, R.raw.music)
         soundPlayer.isLooping = false
     }
 
